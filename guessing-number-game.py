@@ -19,9 +19,9 @@ difficulty = input("Would you like to play the game on easy or hard mode?: ")
 number = random.randint(1, 100)
 def play():
     game_on = True
-    print("I'm thinking of a game between 1 and 100")
+    print("I'm thinking of a number between 1 and 100")
     if difficulty == 'easy':
-        guesses = 10
+        tries = 10
         while game_on:
             guess = int(input("Make a guess: "))
             if guess == number:
@@ -29,24 +29,24 @@ def play():
                 game_on = False
             elif guess > number:
                 print("You guessed too high, try again.")
-                guesses -= 1
-                if guesses > 0:
-                    print(f"You have {guesses} tries left.")
+                tries -= 1
+                if tries > 0:
+                    print(f"You have {tries} tries left.")
                 else:
                     print("You have ran out of guesses.")
                     print(f"The number was {number}.")
                     game_on = False
             elif guess < number:
                 print("You have guessed too low, try again.")
-                guesses -= 1
-                if guesses > 0:
-                    print(f"You have {guesses} tries left.")
+                tries -= 1
+                if tries > 0:
+                    print(f"You have {tries} tries left.")
                 else:
                     print("You have ran out of guesses.")
                     print(f"The number was {number}.")
                     game_on = False
     elif difficulty == 'hard':
-        guesses = 5
+        tries = 5
         while game_on:
             guess = int(input("Make a guess: "))
             if guess == number:
@@ -54,18 +54,18 @@ def play():
                 game_on = False
             elif guess > number:
                 print("You guessed too high, try again.")
-                guesses -= 1
-                if guesses > 0:
-                    print(f"You have {guesses} tries left.")
+                tries -= 1
+                if tries > 0:
+                    print(f"You have {tries} tries left.")
                 else:
                     print("You have ran out of guesses.")
                     print(f"The number was {number}.")
                     game_on = False
             elif guess < number:
                 print("You have guessed too low, try again.")
-                guesses -= 1
-                if guesses > 0:
-                    print(f"You have {guesses} tries left.")
+                tries -= 1
+                if tries > 0:
+                    print(f"You have {tries} tries left.")
                 else:
                     print("You have ran out of guesses.")
                     print(f"The number was {number}.")
